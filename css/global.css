@@ -1,0 +1,20 @@
+a {
+    color: white;
+    text-decoration: none;
+    margin: 5px;
+}
+
+a:hover {
+    font-size: larger;
+    color: orange;
+}
+
+.text-center {
+    padding: 1em;
+    text-align: center;
+}
+
+hr {
+    margin: 0;
+    background-color: darkgray;
+}

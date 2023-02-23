@@ -1,0 +1,23 @@
+section {
+    flex: 2;
+    display: flex;
+    justify-items: stretch;
+    margin: 0;
+    padding: 0;
+}
+
+.left {
+    padding: 1em;
+    border-right: 1px solid gray;
+}
+
+.middle {
+    flex: 2;
+    min-height: 100vh;
+}
+
+
+.rigth {
+    padding: 1em;
+    border-left: 1px solid gray;
+}
