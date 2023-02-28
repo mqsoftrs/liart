@@ -18,3 +18,14 @@ hr {
     margin: 0;
     background-color: darkgray;
 }
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+img {
+    height: 10em;
+    width: 15em;
+    margin: auto;
+}
