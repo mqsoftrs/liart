@@ -14,7 +14,10 @@ function loadImages() {
 }
 
 function populateAbout() {
-    // TODO @stefy
+
+    const aboutContentelement = document.getElementById("aboutContent")
+    const text = document.createTextNode("idemo do kraja samo jakoooo :)))")
+    aboutContentelement.appendChild(text)
 }
 
 function populateContact() {
