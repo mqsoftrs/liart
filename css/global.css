@@ -19,7 +19,7 @@ hr {
     background-color: darkgray;
 }
 
-.gallery {
+#gallery > .middle {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
