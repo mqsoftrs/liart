@@ -19,6 +19,10 @@ function populateAbout() {
 
 function populateContact() {
     // TODO @boka
+    const info = document.getElementById("info")
+    const p = document.createElement("p")
+    p.innerHTML = 'Adresa: Zimski zmaj 999'
+    info.appendChild(p)
 }
 
 // poziv funkcije koja je prethodno definisana
