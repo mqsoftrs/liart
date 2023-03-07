@@ -32,3 +32,11 @@ function populateContact() {
 loadImages()
 populateAbout()
 populateContact()
+
+function changeLanguage() {
+    // https://ricardometring.com/getting-the-value-of-a-select-in-javascript
+    const lan = document.getElementById ("language")
+    debugger
+    var text = lan.options[lan.selectedIndex].text
+    alert(text)
+}
