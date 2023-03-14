@@ -16,6 +16,7 @@ function loadImages() {
 
 function populateAbout() {
 
+    debugger
     const aboutContentelement = document.getElementById("aboutContent")
     const text = document.createTextNode("go hard to the end")
     const p = document.createElement("p")
@@ -29,6 +30,7 @@ function populateAbout() {
 
 function populateContact() {
     // TODO @boka
+    debugger
     const info = document.getElementById("info")
     const p = document.createElement("p")
     p.innerHTML = 'Adress: Zimski zmaj 999'
@@ -37,7 +39,8 @@ function populateContact() {
     const p2 = document.createElement("p2")
     p2.innerHTML = 'Adresa: Zimski zmaj 999'
 
-    info.removeChild(info.firstChild)
+    if (info.firstChild) 
+        info.removeChild(info.firstChild)
 
     if (currentLanguage === "sr") {
         info.appendChild(p2)
@@ -45,6 +48,19 @@ function populateContact() {
     else {
         info.appendChild(p)
     }
+}
+
+// domaci: prouciti detalje ovo funkcije
+function populateContactV2() {
+    const info = document.getElementById("info")
+    if (!info.firstChild) {
+        // ovo ce se dogoditi samo prvi put kad se pozove ova funkcija
+        const p = document.createElement("p")
+        info.appendChild(p)
+    }
+    // ovde koristimo ternarny operator: uslov ? ako_je_uslov_ispunjen_vrati_ovo : ako_nije_vrati_ovo
+    // pogledajte ovo: https://www.w3schools.com/react/react_es6_ternary.asp
+    info.firstChild.innerHTML = currentLanguage === "sr" ? 'Adress: Zimski zmaj 999' : 'Adresa: Zimski zmaj 999'
 }
 
 // poziv funkcije koja je prethodno definisana
