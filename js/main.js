@@ -1,4 +1,5 @@
 console.log("main.js loaded..")
+let currentLanguage = "en"
 
 // definicija funkcije; defincija nije isto i poziv i bez poziva ovo se nece dogoditi
 function loadImages() {
@@ -32,3 +33,24 @@ function populateContact() {
 loadImages()
 populateAbout()
 populateContact()
+
+function changeLanguage() {
+    // https://ricardometring.com/getting-the-value-of-a-select-in-javascript
+    const lan = document.getElementById("language")
+    debugger
+    currentLanguage = lan.options[lan.selectedIndex].text
+
+    if (currentLanguage === "sr") {
+        alert("sr")
+    }
+    else if (currentLanguage === "en") {
+        alert("en")
+    }
+    else {
+        console.log("Unknown language: " + currentLanguage)
+    }
+
+    populateAbout()
+    populateContact()
+
+}
