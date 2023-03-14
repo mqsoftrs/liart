@@ -17,16 +17,34 @@ function loadImages() {
 function populateAbout() {
 
     const aboutContentelement = document.getElementById("aboutContent")
-    const text = document.createTextNode("idemo do kraja samo jakoooo :)))")
-    aboutContentelement.appendChild(text)
+    const text = document.createTextNode("go hard to the end")
+    const p = document.createElement("p")
+    p.innerHTML = "idemo jako do kraja"
+    if (aboutContentelement.firstChild)
+    aboutContentelement.removeChild(aboutContentelement.firstChild);
+    if (currentLanguage === 'sr') { aboutContentelement.appendChild(p) }
+    else if (currentLanguage === 'en') { aboutContentelement.appendChild(text) }
+
 }
 
 function populateContact() {
     // TODO @boka
     const info = document.getElementById("info")
     const p = document.createElement("p")
-    p.innerHTML = 'Adresa: Zimski zmaj 999'
-    info.appendChild(p)
+    p.innerHTML = 'Adress: Zimski zmaj 999'
+    // info.appendChild(p)
+
+    const p2 = document.createElement("p2")
+    p2.innerHTML = 'Adresa: Zimski zmaj 999'
+
+    info.removeChild(info.firstChild)
+
+    if (currentLanguage === "sr") {
+        info.appendChild(p2)
+    }
+    else {
+        info.appendChild(p)
+    }
 }
 
 // poziv funkcije koja je prethodno definisana
