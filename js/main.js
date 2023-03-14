@@ -17,8 +17,14 @@ function loadImages() {
 function populateAbout() {
 
     const aboutContentelement = document.getElementById("aboutContent")
-    const text = document.createTextNode("idemo do kraja samo jakoooo :)))")
-    aboutContentelement.appendChild(text)
+    const text = document.createTextNode("go hard to the end")
+    const p = document.createElement("p")
+    p.innerHTML = "idemo jako do kraja"
+    if (aboutContentelement.firstChild)
+    aboutContentelement.removeChild(aboutContentelement.firstChild);
+    if (currentLanguage === 'sr') { aboutContentelement.appendChild(p) }
+    else if (currentLanguage === 'en') { aboutContentelement.appendChild(text) }
+
 }
 
 function populateContact() {
