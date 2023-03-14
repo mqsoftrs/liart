@@ -25,8 +25,20 @@ function populateContact() {
     // TODO @boka
     const info = document.getElementById("info")
     const p = document.createElement("p")
-    p.innerHTML = 'Adresa: Zimski zmaj 999'
-    info.appendChild(p)
+    p.innerHTML = 'Adress: Zimski zmaj 999'
+    // info.appendChild(p)
+
+    const p2 = document.createElement("p2")
+    p2.innerHTML = 'Adresa: Zimski zmaj 999'
+
+    info.removeChild(info.firstChild)
+
+    if (currentLanguage === "sr") {
+        info.appendChild(p2)
+    }
+    else {
+        info.appendChild(p)
+    }
 }
 
 // poziv funkcije koja je prethodno definisana
